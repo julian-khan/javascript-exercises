@@ -14,7 +14,7 @@ const palindromes = function (word) {
     return true
 }
     
-
+palindromes('hello');
 
 // Do not edit below this line
 module.exports = palindromes;
