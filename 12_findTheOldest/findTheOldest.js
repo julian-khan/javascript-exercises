@@ -1,15 +1,17 @@
 const findTheOldest = function(people) {
 
-  calculateAge(people);
+  const copiedArr = [...people];
 
-  people.sort((a, b) => { 
+  calculateAge(copiedArr);
+
+  copiedArr.sort((a, b) => { 
     return a.age - b.age;
   });
-  return people.pop();
+  return copiedArr.pop();
 };
 
-function calculateAge(people) {
-  people.forEach((person) => {
+function calculateAge(copiedArr) {
+  copiedArr.forEach((person) => {
     if (!(person.hasOwnProperty('yearOfDeath'))) {
 
       const date = new Date();
